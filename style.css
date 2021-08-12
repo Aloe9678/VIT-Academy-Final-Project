@@ -1,0 +1,61 @@
+body {
+    background-color: aqua;
+}
+
+h1  {
+    color: rgb(17, 141, 135);
+    text-align: center;
+}
+
+.squiggly {
+    position: relative;
+    height: 15px;
+    width: 95%;
+    margin: auto;
+}
+
+.squiggly::after,
+.squiggly::before {
+    height: inherit;
+    width: inherit;
+    background-size: 12px 100%; /* Change this to adjust the size of the squiggly line. */
+    content: "";
+    position: absolute;
+}
+
+.squiggly::before {
+    top: -2px;
+    background-image: linear-gradient(45deg, salmon 35%, transparent 0),
+        linear-gradient(-45deg, salmon 35%, transparent 0);
+}
+
+.squiggly::after {
+    top: 0px;
+    background-image: linear-gradient(45deg, transparent 0),
+        linear-gradient(-45deg, transparent 0);
+}
+
+#quiz {
+    color: rgb(17, 141, 135);
+    font-weight: bold;
+    margin-left: 30px;
+}
+
+#button {
+    background-color: salmon;
+    color: rgb(17, 141, 135);
+    font-weight: bold;
+    font-size: medium;
+    padding: 5px;
+}
+
+#result {
+    color: salmon;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
